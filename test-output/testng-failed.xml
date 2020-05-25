@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [API Slack]" guice-stage="DEVELOPMENT">
+  <parameter name="baseUrl" value="https://slack.com/api"/>
+  <parameter name="token" value="xoxp-1101494880035-1094553166998-1107491671364-58270a0a37bbde75818c18be92761707"/>
+  <test name="renameChannel(failed)">
+    <classes>
+      <class name="com.plivo.test.ApiTest">
+        <parameter name="basePath" value="/channels.rename"/>
+        <parameter name="rename" value="kjjhfh"/>
+        <methods>
+          <include name="configuration"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="renameChannel" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.plivo.test.ApiTest -->
+    </classes>
+  </test> <!-- renameChannel(failed) -->
+  <test name="listAllChannels(failed)">
+    <classes>
+      <class name="com.plivo.test.ApiTest">
+        <parameter name="basePath" value="/channels.list"/>
+        <methods>
+          <include name="listAllChannels"/>
+          <include name="configuration"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+          <include name="befreMethodConfig"/>
+        </methods>
+      </class> <!-- com.plivo.test.ApiTest -->
+    </classes>
+  </test> <!-- listAllChannels(failed) -->
+</suite> <!-- Failed suite [API Slack] -->

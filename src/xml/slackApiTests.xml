@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Slack" thread-count="1">
+
+    <parameter name="baseUrl" value="https://slack.com/api"/>
+    <parameter name="token" value="xoxp-1101494880035-1094553166998-1107491671364-58270a0a37bbde75818c18be92761707"></parameter>
+
+
+    <!-- ############################## Testing ##################### -->
+
+    <test name="creatingChannel">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.create"/>
+                    <parameter name="name" value="fhkflg"></parameter>
+                    <include name="createChannel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="joinChannel">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.join"/>
+                    <include name="joinChannel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="renameChannel">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.rename"/>
+                    <parameter name="rename" value="kjjhfh"></parameter>
+                    <include name="renameChannel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="listAllChannels">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.list"/>
+                    <include name="listAllChannels"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="archiveChannel">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.archive"/>
+                    <include name="archiveChannel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="validateChannelArchive">
+        <classes>
+            <class name="com.plivo.test.ApiTest">
+                <methods>
+                    <parameter name="basePath" value="/channels.info"/>
+                    <include name="validateChannelArchive"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
