@@ -4,7 +4,7 @@
 <suite name="API Slack" thread-count="1">
 
     <parameter name="baseUrl" value="https://slack.com/api"/>
-    <parameter name="token" value="xoxp-1101494880035-1094553166998-1107491671364-58270a0a37bbde75818c18be92761707"></parameter>
+    <parameter name="token" value=""></parameter>
 
 
     <!-- ############################## Testing ##################### -->
